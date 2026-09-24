@@ -1,5 +1,6 @@
 package com.example.cwiczenie52mp_18;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,19 @@ public class MainActivity extends AppCompatActivity {
     Button btnLosuj;
     View prostokat;
     int liczba;
+
+    int[] kolory = {
+            Color.RED,
+            Color.GREEN,
+            Color.BLUE,
+            Color.YELLOW,
+            Color.CYAN,
+            Color.MAGENTA,
+            Color.GRAY,
+            Color.BLACK,
+            Color.DKGRAY,
+            Color.LTGRAY
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 liczba = (int) (Math.random() * 10) + 1;
                 tvLosowaLiczba.setText("Wylosowana liczba: " + liczba);
+                prostokat.setBackgroundColor(kolory[liczba - 1]);
             }
         });
     }
