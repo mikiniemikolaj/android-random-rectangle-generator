@@ -3,6 +3,7 @@ package com.example.cwiczenie52mp_18;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -43,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
                 liczba = (int) (Math.random() * 10) + 1;
                 tvLosowaLiczba.setText("Wylosowana liczba: " + liczba);
                 prostokat.setBackgroundColor(kolory[liczba - 1]);
+
+                ViewGroup.LayoutParams params = prostokat.getLayoutParams();
+                params.height = liczba * 30;
+                prostokat.setLayoutParams(params);
             }
         });
     }
