@@ -24,4 +24,10 @@
         android:layout_marginBottom="24dp"
         tools:ignore="MissingConstraints" />
 
+    <View
+        android:id="@+id/prostokat"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
